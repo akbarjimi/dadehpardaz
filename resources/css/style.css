@@ -1,0 +1,951 @@
+/*
+Theme Name: سامانه مشاهده و ویرایش کار
+Author: دیکاوب
+Author URI: http://dikaweb.ir
+Version: 1.0.0
+*/
+
+/*--------------------------------------------------------------
+Font Face
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: bold;
+	src: url('include/fonts/iransans/IRANSansWeb_Bold.eot');
+	src: url('include/fonts/iransans/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
+		/* IE6-8 */
+		url('include/fonts/iransans/IRANSansWeb_Bold.woff2') format('woff2'),
+		/* FF39+,Chrome36+, Opera24+*/
+		url('include/fonts/iransans/IRANSansWeb_Bold.woff') format('woff'),
+		/* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		url('include/fonts/iransans/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 300;
+	src: url('include/fonts/iransans/IRANSansWeb_Light.eot');
+	src: url('include/fonts/iransans/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
+		/* IE6-8 */
+		url('include/fonts/iransans/IRANSansWeb_Light.woff2') format('woff2'),
+		/* FF39+,Chrome36+, Opera24+*/
+		url('include/fonts/iransans/IRANSansWeb_Light.woff') format('woff'),
+		/* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		url('include/fonts/iransans/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: normal;
+	src: url('include/fonts/iransans/IRANSansWeb.eot');
+	src: url('include/fonts/iransans/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+		/* IE6-8 */
+		url('include/fonts/iransans/IRANSansWeb.woff2') format('woff2'),
+		/* FF39+,Chrome36+, Opera24+*/
+		url('include/fonts/iransans/IRANSansWeb.woff') format('woff'),
+		/* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		url('include/fonts/iransans/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSansFaNum;
+	font-style: normal;
+	font-weight: normal;
+	src: url('include/fonts/iransans/IRANSansWeb_FaNum.eot');
+	src: url('include/fonts/iransans/IRANSansWeb_FaNum.eot?#iefix') format('embedded-opentype'),
+		/* IE6-8 */
+		url('include/fonts/iransans/IRANSansWeb_FaNum.woff2') format('woff2'),
+		/* FF39+,Chrome36+, Opera24+*/
+		url('include/fonts/iransans/IRANSansWeb_FaNum.woff') format('woff'),
+		/* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		url('include/fonts/iransans/IRANSansWeb_FaNum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'f-icon';
+	font-style: normal;
+	font-weight: normal;
+	src: url('include/fonts/f-icon/f-icon.eot');
+	src: url('include/fonts/f-icon/f-icon.eot?#iefix') format('embedded-opentype'),
+		url('include/fonts/f-icon/f-icon.woff2') format('woff2'),
+		url('include/fonts/f-icon/f-icon.woff') format('woff'),
+		url('include/fonts/f-icon/f-icon.ttf') format('truetype'),
+		url('include/fonts/f-icon/f-icon.svg#f-icon') format('svg');
+}
+
+
+/*--------------------------------------------------------------
+Normalize
+--------------------------------------------------------------*/
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: IRANSans;
+	font-size: 12px;
+	line-height: normal;
+	background: #f8f8fc;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-weight: bold;
+}
+
+.tooltip {
+	font-family: IRANSans;
+	font-size: 11px;
+}
+
+
+
+/*--------------------------------------------------------------
+Form
+--------------------------------------------------------------*/
+.form-group label {
+	font-weight: normal;
+    font-size: 14px;
+}
+
+.form-control:focus {
+	border-color: #444;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.btn {
+	border-radius: 0;
+	-webkit-transition: background .15s;
+	transition: background .15s;
+}
+
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+	outline: none;
+}
+
+.btn-blue {
+	background-color: #4f63d6;
+	border-radius: 100px;
+	color: #fff;
+	box-shadow: rgb(184, 192, 240) 1px 1px 20px;
+}
+
+.btn-blue:active {
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+	color: #fff;
+}
+
+.btn-gray {
+	background-color: #555;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.btn-gray:hover {
+	color: #fff;
+	background-color: #444;
+}
+
+.btn-gray:active,
+.btn-gray:active:focus,
+.btn-gray:focus {
+	color: #fff;
+	background-color: #555;
+}
+
+.form-group ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.form-group ul li {
+	display: inline-block;
+}
+
+.form-group ul li + li {
+	margin-right: 15px;
+}
+
+
+/*--------------------------------------------------------------
+Checkbox
+--------------------------------------------------------------*/
+input[type=checkbox].css-checkbox {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+input.css-checkbox + label.css-label {
+	position: relative;
+	height: 15px;
+	display: inline-block;
+	padding-right: 25px;
+	line-height: 16px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 14px;
+	font-weight: normal;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.css-label::before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #ccc;
+}
+
+input.css-checkbox:checked + .css-label::after {
+	content: '';
+	position: absolute;
+	right: 5px;
+	top: 2px;
+	width: 6px;
+	height: 10px;
+	border-style: solid;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.blue-check::after {
+	border-color: #172ca0;
+}
+
+.green-check::after {
+	border-color: #12950f;
+}
+
+
+/*--------------------------------------------------------------
+Radio btn
+--------------------------------------------------------------*/
+input[type=radio].css-radiobtn {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+input.css-radiobtn + label.css-label {
+	position: relative;
+	height: 15px;
+	display: inline-block;
+	padding-right: 25px;
+	line-height: 16px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 14px;
+	font-weight: normal;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input.css-radiobtn + .css-label::before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+}
+
+input.css-radiobtn:checked + .css-label::after {
+	content: '';
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+}
+
+input.css-radiobtn + .blue-check::after {
+	background: #172ca0;
+}
+
+input.css-radiobtn + .green-check::after {
+	background: #12950f;
+}
+
+
+/*--------------------------------------------------------------
+Select
+--------------------------------------------------------------*/
+.css-select {
+	height: 35px;
+	outline: none;
+}
+
+
+/*--------------------------------------------------------------
+Login
+--------------------------------------------------------------*/
+#login-page {
+	height: 100%;
+	position: relative;
+	background: url('include/img/login-bg.png');
+	background-size: cover;
+}
+
+#login-page::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	background: rgba(23, 44, 160, 0.9);
+	background: -moz-linear-gradient(45deg, rgba(79, 99, 214, 0.5) 0%, rgba(23, 44, 160, 0.9) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(79, 99, 214, 0.5) 0%, rgba(23, 44, 160, 0.9) 100%);
+	background: linear-gradient(45deg, rgba(79, 99, 214, 0.5) 0%, rgba(23, 44, 160, 0.9) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#804f63d6', endColorstr='#e6172ca0', GradientType=1);
+}
+
+.login-panel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 25px 40px 20px;
+	text-align: center;
+	z-index: 1;
+	box-shadow: rgba(239, 239, 239, 0.4) 0px 0px 15px 4px;
+}
+
+.login-panel .logo {
+	margin-bottom: 30px;
+}
+
+.login-panel .logo h1 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.65;
+}
+
+.login-panel .form-group {
+	position: relative;
+}
+
+.login-panel .form-control {
+	height: 40px;
+	direction: ltr;
+	border-radius: 5px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.login-panel .form-control:focus {
+	border-color: #4f63d6;
+	-webkit-box-shadow: 0 0 8px rgba(79, 99, 214, .6);
+	box-shadow: 0 0 8px rgba(79, 99, 214, .6);
+}
+
+
+.login-panel .form-group label {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 78px;
+	padding: 0 10px;
+	font-size: 14px;
+	line-height: 38px;
+	color: #333;
+	border-radius: 0 4px 4px 0;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+	background: #ccc;
+}
+
+.login-panel .form-group label::aftger {
+	content: '';
+	border-left: 1px solid #ccc;
+}
+
+.login-panel .btn {
+	margin-top: 20px;
+	padding: 10px 40px;
+}
+
+.login-panel .remember {
+	margin-top: 15px;
+}
+
+
+/*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+#header {
+	color: #fff;
+	background: #172ca0;
+	background: -moz-linear-gradient(45deg, #9817a0 0%, #172ca0 100%);
+	background: -webkit-linear-gradient(45deg, #9817a0 0%, #172ca0 100%);
+	background: linear-gradient(45deg, #9817a0 0%, #172ca0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9817a0', endColorstr='#172ca0', GradientType=1);
+}
+
+#header .top-bar {
+	height: 48px;
+	line-height: 48px;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#header .logo h1 {
+	margin: 0;
+	font-size: 14px;
+	line-height: 48px;
+}
+
+#header .profile {
+	position: relative;
+	cursor: pointer;
+}
+
+#header .profile img {
+	border-radius: 100%;
+	width: 36px;
+	height: auto;
+	vertical-align: middle
+}
+
+#header .profile ul {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100px;
+	padding: 0;
+	padding-top: 7px;
+	text-align: center;
+	list-style: none;
+	z-index: 1;
+	-webkit-transition: all .15s;
+	transition: all .15s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#header .profile:hover ul {
+	top: 48px;
+	opacity: 1;
+	visibility: visible;
+}
+
+#header .profile ul::before {
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 10px;
+	border-bottom: 8px solid rgb(60, 11, 80);
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+}
+
+#header .profile ul li {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgb(60, 11, 80);
+}
+
+#header .profile ul li:first-child {
+	border-radius: 4px 4px 0 0;
+}
+
+#header .profile ul li:last-child {
+	border-radius: 0 0 4px 4px;
+}
+
+#header .profile ul li a {
+	padding: 0 14px;
+	display: block;
+	color: #ddd;
+	line-height: 38px;
+	-webkit-transition: color .15s;
+	transition: color .15s;
+}
+
+#header .profile ul li a:hover {
+	color: #fff;
+}
+
+#header .time {
+	margin-left: 12px;
+	font-family: IRANSansFaNum;
+}
+
+#header .navbar-nav > li {
+	outline: none;
+	-webkit-transition: all .15s;
+	transition: all .15s;
+}
+
+#header .navbar-nav > li:hover,
+#header .navbar-nav > li.active {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+#header .navbar-nav > li > a,
+#header .navbar-nav > li > a:hover {
+	padding: 0 20px;
+	font-size: 16px;
+	line-height: 80px;
+	color: #fff !important;
+	background-color: transparent;
+}
+
+#header .navbar-toggler {
+	padding: 14px 0;
+}
+
+#header .navbar-toggler a {
+	float: right;
+	font-size: 26px;
+	color: #fff;
+}
+
+#header .page-title {
+	float: right;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 38px;
+	margin-right: 8px;
+}
+
+
+/*--------------------------------------------------------------
+Main
+--------------------------------------------------------------*/
+#main {
+	position: relative;
+	padding-top: 20px;
+}
+
+#main::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 142px;
+	z-index: -1;
+	background: url('include/img/pat-top.jpg') top center repeat-x;
+}
+
+.split ul.row {
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+	list-style: none;
+}
+
+.split ul.row li {
+	margin: 15px 0;
+	text-align: center;
+}
+
+.split ul.row li a {
+	display: block;
+	padding: 36px 0;
+	border: 1px solid #dce2e7;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 2.6;
+	color: #000;
+	background: #fbfbfb;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 1px;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+
+.split ul.row.item li a {
+	box-shadow: none;
+}
+
+.split ul.row li a:hover {
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 1px;
+}
+
+.split ul.row.item li a:hover {
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 1px;
+}
+
+.option-box {
+	margin-bottom: 25px;
+	padding: 30px;
+	border: 1px solid #dce2e7;
+	border-radius: 5px;
+	background: #fff;
+}
+
+@media (max-width: 768px) {
+	.option-box .search {
+		margin-bottom: 15px;
+	}
+
+	.option-box .adv-search {
+		padding-left: 8px;
+	}
+
+	.option-box .reload {
+		padding-right: 8px;
+	}
+
+	.option-box .btn-gray {
+		font-size: 13px;
+	}
+}
+
+.option-box.search-box .search {
+	margin-bottom: 0;
+}
+
+.option-box .btn-gray {
+	height: 46px;
+	padding: 0;
+	display: block;
+	line-height: 46px;
+}
+
+.option-box .search {
+	position: relative;
+}
+
+.option-box .search .form-group {
+	margin: 0;
+}
+
+.option-box.search-box .form-group {
+	margin-bottom: 15px;
+}
+
+.option-box .search .form-group .form-control {
+	height: 48px;
+}
+
+.option-box .search .btnn {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	height: 48px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	color: #333;
+	background: none;
+}
+
+.table {
+	font-family: IRANSansFaNum;
+}
+
+.table thead tr td {
+	line-height: 30px
+}
+
+.table-bordered {
+	border-color: #ccc;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+	border-color: #ccc;
+}
+
+.table-striped > thead > tr {
+	background-color: #ddd;
+}
+
+.table-striped > tbody > tr {
+	background-color: #fff;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+	background-color: #f2f2f2;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #eee;
+}
+
+.table td.line {
+	font-weight: bold;
+}
+
+.table td.actions {
+	text-align: center;
+}
+
+.table td.actions a {
+	margin: 0 5px;
+	font-size: 14px;
+	color: #172ca0;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+
+.table td.actions a:hover {
+	color: #000;
+}
+
+.modal.details .modal-header {
+	padding: 10px 15px 6px;
+}
+
+.modal.details .close {
+	font-size: 24px;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+
+.modal.details .favorite a {
+	color: #ff0000;
+	font-size: 16px;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+
+.modal.details .favorite a:hover {
+	color: #a00000;
+}
+
+.modal.details .info .pic {
+	width: 85px;
+	float: right;
+	margin-left: 15px;
+}
+
+.modal.details .info .title {
+	padding: 10px 0;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.modal.details .desc .title {
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.modal.details .desc p {
+	font-size: 13px;
+	text-align: justify;
+}
+
+.modal.details .last-update,
+.modal.details .last-edit {
+	font-family: IRANSansFaNum;
+	font-size: 13px;
+	line-height: 2.3;
+}
+
+.modal.details .last-update .title,
+.modal.details .last-edit .title {
+	font-weight: bold;
+	font-size: 13px;
+	padding-left: 5px;
+}
+
+.modal.details .chart img {
+	margin: 0 auto;
+	display: block;
+}
+
+.modal.details .chart span {
+	display: block;
+	padding-top: 8px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.modal.details .table {
+	font-family: IRANSansFaNum;
+}
+
+
+/*--------------------------------------------------------------
+Pagination
+--------------------------------------------------------------*/
+.pagination {
+	width: 100%;
+	margin: 20px auto 10px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.pagination ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.pagination ul li {
+	display: inline;
+	font-family: IRANSansFaNum;
+}
+
+.pagination ul li a,
+.pagination ul li span {
+	float: right;
+	margin: 0 3px;
+	padding: 6px 15px;
+	color: #000;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: #fbfbfb;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+
+.pagination ul li a:hover {
+	color: #fcfcfc;
+	border-color: #4f63d6;
+	background: #4f63d6;
+}
+
+.pagination ul li.active span {
+	color: #fcfcfc;
+	background: #172ca0;
+	border: 1px solid #172ca0;
+}
+
+
+
+/*--------------------------------------------------------------
+Font icon
+--------------------------------------------------------------*/
+[class^="i-"]:before,
+[class*=" i-"]:before {
+	font-family: f-icon;
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.i-search:before {
+	content: '\e800';
+}
+
+.i-right-open:before {
+	content: '\e801';
+}
+
+.i-left-open:before {
+	content: '\e802';
+}
+
+.i-right-dir:before {
+	content: '\e803';
+}
+
+.i-left-dir:before {
+	content: '\e804';
+}
+
+.i-eye:before {
+	content: '\e805';
+}
+
+.i-pencil:before {
+	content: '\e806';
+}
+
+.i-heart:before {
+	content: '\e807';
+}
+
+.i-heart-empty:before {
+	content: '\e808';
+}
+
+.i-star:before {
+	content: '\e809';
+}
+
+.i-star-empty:before {
+	content: '\e80a';
+}
+
+.i-up-dir:before {
+	content: '\e80b';
+}
+
+.i-down-dir:before {
+	content: '\e80c';
+}
+
+.i-up-open:before {
+	content: '\e80d';
+}
+
+.i-down-open:before {
+	content: '\e80e';
+}
+
+.i-menu:before {
+	content: '\f0c9';
+}
